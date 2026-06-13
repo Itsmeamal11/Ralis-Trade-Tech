@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Ralis Trade Tech W.L.L</title>
+    <link rel="icon" type="image/png" href="pics/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-800 font-sans scroll-smooth pt-24">
+
+    <header id="main-navbar" class="navbar-scrolled fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
+        <div class="max-w-7xl px-6 mx-auto flex justify-between items-center transition-all duration-500 ease-in-out" id="navbar-container" style="height: 4rem !important; padding-top: 0px !important; padding-bottom: 0px !important;">
+            
+            <div class="flex items-center flex-shrink-0 z-50 py-2" id="logo-wrapper">
+                <a href="index.html#home" class="block flex items-center h-full">
+                    <img src="pics/logo.png" alt="Ralis Trade Tech Logo" id="navbar-logo" 
+                         class="w-auto object-contain transition-all duration-300 ease-in-out block" style="height: 55px !important; max-height: 55px !important; min-height: 55px !important;">
+                </a>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-semibold text-sm lg:text-base tracking-wide" id="nav-links">
+                <a href="index.html#home" class="transition duration-300 py-2 text-slate-700 hover:text-brandRed">Home</a>
+                <a href="index.html#about" class="transition duration-300 py-2 text-slate-700 hover:text-brandRed">About</a>
+                <a href="index.html#services" class="transition duration-300 py-2 text-slate-700 hover:text-brandRed">Our Services</a>
+                <a href="products.html" class="transition duration-300 py-2 text-brandRed font-bold">Products</a>
+                <a href="index.html#why-choose-us" class="transition duration-300 py-2 text-slate-700 hover:text-brandRed">Why Choose Us</a>
+                <a href="contact.html" class="transition duration-300 py-2 text-slate-700 hover:text-brandRed">Contact Us</a>
+            </nav>
+            
+            <div class="hidden md:flex items-center space-x-3 flex-shrink-0">
+                <button id="nav-quote-button" class="whitespace-nowrap bg-[#C53030] hover:bg-[#9B2C2C] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-sm transition-all duration-250 hover:-translate-y-0.5 ease-in-out">
+                    Get Quote
+                </button>
+            </div>
+
+            <div class="flex md:hidden items-center z-50">
+                <button id="mobile-menu-toggle" class="focus:outline-none p-2 rounded-lg transition-colors duration-300 text-slate-800">
+                    <svg class="w-7 h-7" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-dropdown" class="hidden md:hidden absolute left-4 right-4 bg-slate-900 border border-white/10 flex flex-col px-6 py-6 space-y-3 font-bold text-base transition-all duration-300 ease-in-out opacity-0 -translate-y-4 rounded-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] z-50 mt-2">
+            <a href="index.html#home" class="text-white/90 hover:text-brandRed transition py-2.5 border-b border-white/5 tracking-wide">Home</a>
+            <a href="index.html#about" class="text-white/90 hover:text-brandRed transition py-2.5 border-b border-white/5 tracking-wide">About</a>
+            <a href="index.html#services" class="text-white/90 hover:text-brandRed transition py-2.5 border-b border-white/5 tracking-wide">Our Services</a>
+            <a href="products.html" class="text-white/90 hover:text-brandRed transition py-2.5 border-b border-white/5 tracking-wide">Products</a>
+            <a href="index.html#why-choose-us" class="text-white/90 hover:text-brandRed transition py-2.5 border-b border-white/5 tracking-wide">Why Choose Us</a>
+            <a href="contact.html" class="text-white/90 hover:text-brandRed transition py-2.5 border-b border-white/5 tracking-wide">Contact Us</a>
+            <button id="mobile-quote-trigger" onclick="document.getElementById('quote-modal').classList.add('modal-active'); document.body.style.overflow = 'hidden';" class="w-full bg-[#C53030] text-white text-center py-3 rounded-xl font-black shadow-lg hover:bg-[#9B2C2C] transition duration-300 block mt-2 tracking-wide text-sm">Get Quote</button>
+        </div>
+    </header>
+
+<section id="products" class="py-12 px-6 bg-white min-h-[70vh]">
+    
+    <div class="max-w-7xl mx-auto text-center mb-12 flex flex-col items-center">
+        <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]">
+            Our Products
+        </span>
+        <h3 class="text-3xl md:text-5xl font-black text-brandDark mt-4 opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_0.2s_forwards]">
+            Premium Construction Materials
+        </h3>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-12 opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_0.25s_forwards]">
+        <button onclick="filterProducts('all')" class="filter-btn bg-brandRed text-white hover:bg-red-600 font-medium px-6 py-2 rounded-full shadow-sm transition-all duration-300 hover:scale-105">All</button>
+        <button onclick="filterProducts('sand')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-red-600 font-medium px-6 py-2 rounded-full border border-slate-200/60 transition-all duration-300 hover:scale-105">Sand</button>
+        <button onclick="filterProducts('blocks')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-red-600 font-medium px-6 py-2 rounded-full border border-slate-200/60 transition-all duration-300 hover:scale-105">Blocks</button>
+        <button onclick="filterProducts('pavers')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-red-600 font-medium px-6 py-2 rounded-full border border-slate-200/60 transition-all duration-300 hover:scale-105">Pavers</button>
+        <button onclick="filterProducts('kerbs')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-red-600 font-medium px-6 py-2 rounded-full border border-slate-200/60 transition-all duration-300 hover:scale-105">Kerbs</button>
+        <button onclick="filterProducts('crushedproducts')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-red-600 font-medium px-6 py-2 rounded-full border border-slate-200/60 transition-all duration-300 hover:scale-105">Crushed Products</button>
+        <button onclick="filterProducts('concrete')" class="filter-btn bg-slate-100 text-slate-600 hover:bg-red-600 font-medium px-6 py-2 rounded-full border border-slate-200/60 transition-all duration-300 hover:scale-105">Concrete</button>
+
+
+    </div>
+
+    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8 opacity-0 translate-y-4 animate-[fadeInUp_0.6s_ease-out_0.3s_forwards]" id="product-grid">
+        <!-----------------------------------------SAND----------------- ------------------------------------------------------>
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="sand">
+            <img src="pics/Sand 1.png" alt="Washed Sand" class="w-full h-80 object-cover">
+        </div>
+
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="sand">
+            <img src="pics/Sand 2.jpg" alt="Un-Washed Sand" class="w-full h-80 object-cover">
+        </div>
+
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="sand">
+            <img src="pics/Sand 3.jpg" alt="Un-Washed Sand" class="w-full h-80 object-cover">
+        </div>
+
+        <!-----------------------------------------BLOCKS----------------------------------------------------------------------->
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="blocks">
+            <img src="pics/block 1.png" alt="Hollow Blocks" class="w-full h-80 object-cover">
+        </div>
+
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="blocks">
+            <img src="pics/block 2 .png" alt="Solid Blocks" class="w-full h-80 object-cover">
+        </div>
+
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="blocks">
+            <img src="pics/block 3.png" alt="Solid Blocks" class="w-full h-80 object-cover">
+        </div>
+
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="blocks">
+            <img src="pics/block 4 .png" alt="Solid Blocks" class="w-full h-80 object-cover">
+        </div>
+<!-------------------------------------------------------------PAVERS------------------------------------------------->
+
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="pavers">
+            <img src="pics/Paving 1 .png" alt="Paver Blocks" class="w-full h-80 object-cover">
+        </div>
+
+         <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="pavers">
+            <img src="pics/Paving 2.png" alt="Paver Blocks" class="w-full h-80 object-cover">
+        </div>
+
+         <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="pavers">
+            <img src="pics/Paving 3.jpg" alt="Paver Blocks" class="w-full h-80 object-cover">
+        </div>
+<!--------------------------------------------------------------KERBS----------------------------------------------------------->
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="kerbs">
+            <img src="pics/Kerbs 1 .png" alt="Aggregate" class="w-full h-80 object-cover">
+        </div>
+        
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="kerbs">
+            <img src="pics/Kerbs 2 .png" alt="Aggregate" class="w-full h-80 object-cover">
+        </div>
+<!--------------------------------------------------------------crushed products----------------------------------------------------------->
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 1 .png" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+                <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 2 .jpg" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+
+                <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 3.png" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+
+                <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 4.jpg" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+
+                <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 5.png" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+
+                <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 6.jpg" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+
+                <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="crushedproducts">
+            <img src="pics/crushed products 7.png" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+<!------------------------------------------------------------Concrete-------------------------------------------------------------------->
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="concrete">
+            <img src="pics/Ready-Mix Concrete 1.jpg" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="concrete">
+            <img src="pics/Ready-Mix Concrete 2.png" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+        <div class="product-card rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 transform opacity-100 scale-100" data-category="concrete">
+            <img src="pics/Ready-Mix Concrete 3.webp" alt="Crushed Products" class="w-full h-80 object-cover">
+        </div>
+
+    </div>
+</section>
+
+    <footer class="bg-slate-100 text-slate-600 py-16 px-6 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 border-b border-slate-200 pb-12 mb-12">
+            <div>
+                <div class="flex items-center mb-6">
+                    <img src="pics/logo.png" alt="Ralis Trade Tech Logo" class="h-16 w-auto object-contain opacity-100">
+                </div>
+                <p class="text-sm leading-relaxed text-slate-500">
+                    Your premier dependable partner supplying top-grade, industry-standard construction components across the Kingdom of Bahrain.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-slate-900 font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="index.html#home" class="hover:text-brandRed transition text-slate-600">Home</a></li>
+                    <li><a href="index.html#about" class="hover:text-brandRed transition text-slate-600">About Us</a></li>
+                    <li><a href="index.html#services" class="hover:text-brandRed transition text-slate-600">Our Services</a></li>
+                    <li><a href="products.html" class="hover:text-brandRed transition text-slate-600">Products</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-slate-900 font-bold text-lg mb-6">Contact Channels</h5>
+                <p class="text-sm text-slate-500 mb-2 font-medium">Kingdom of Bahrain</p>
+                <p class="text-sm font-semibold text-slate-800">Email: <span class="text-brandRed hover:underline cursor-pointer">info@ralistradetech.com</span></p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center text-xs text-slate-400 font-medium">
+            &copy; 2026 Ralis Trade Tech W.L.L. All Rights Reserved. Built with performance structures.
+        </div>
+    </footer>
+
+    <div id="quote-modal" class="fixed inset-0 bg-black/60 z-[99999] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white w-full max-w-lg rounded-2xl p-8 relative shadow-2xl transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition p-2 rounded-lg focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+                        <form action="https://formspree.io/f/xgobpjee" method="POST" class="space-y-5" id="quote-form">
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="wa-name" name="Full Name" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brandRed transition">
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Email <span class="text-red-500">*</span></label>
+                    <input type="email" id="wa-email" name="Email Address" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brandRed transition">
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Contact Numbers <span class="text-red-500">*</span></label>
+                    <input type="tel" id="wa-phone" name="Phone Number" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brandRed transition">
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-2">Contact me in</label>
+                    <div class="flex items-center space-x-6 text-sm font-medium text-slate-700">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="Preferred Contact Method" value="phone" class="w-4 h-4 text-brandRed focus:ring-brandRed border-slate-300">
+                            <span>Phone</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="Preferred Contact Method" value="email" class="w-4 h-4 text-brandRed focus:ring-brandRed border-slate-300">
+                            <span>Email</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Product Looking for?</label>
+                    <select id="wa-product" name="Product Interested In" class="w-full border border-slate-200 bg-white rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:border-brandRed transition cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_16px_center] bg-no-repeat">
+                        <option value="Blocks">Blocks</option>
+                        <option value="Crushed Products">Crushed Products</option>
+                        <option value="HP KERBS & EDGE KERBS">HP KERBS & EDGE KERBS</option>
+                        <option value="Ready-Mix Concrete">Ready-Mix Concrete</option>
+                        <option value="Washed Sand">Washed Sand</option>
+                        <option value="Unwashed Sand">Unwashed Sand</option>
+                    </select>
+                </div>
+                
+                <div class="pt-4 flex flex-col gap-3">
+                    <button type="submit" class="w-full bg-[#EA3829] hover:bg-[#D62E20] text-white font-bold py-3.5 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Submit via Email
+                    </button>
+                    
+                    <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3.5 px-6 rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.124.551 4.195 1.599 6.01L.044 23.953l6.059-1.585c1.768.966 3.754 1.474 5.828 1.474 6.645 0 12.03-5.385 12.03-12.03C23.961 5.385 18.676 0 12.031 0zm.017 21.905c-1.802 0-3.57-.485-5.116-1.401l-.367-.217-3.805.996 1.018-3.71-.238-.379c-.997-1.589-1.523-3.435-1.523-5.352 0-5.513 4.487-10 10.003-10 5.515 0 10 4.487 10 10s-4.485 10-10 10zm5.485-7.485c-.301-.151-1.785-.882-2.062-.983-.277-.101-.479-.151-.68.151-.201.302-.781.983-.957 1.185-.176.202-.352.227-.653.076-1.396-.704-2.529-1.599-3.486-3.219-.206-.35-.022-.54.129-.69.135-.135.302-.353.453-.529.151-.176.201-.302.302-.503.101-.202.05-.378-.025-.529-.076-.151-.68-1.639-.932-2.245-.246-.591-.496-.511-.68-.521l-.579-.01c-.201 0-.528.076-.804.378-.277.302-1.056 1.033-1.056 2.518 0 1.485 1.082 2.92 1.232 3.122.151.201 2.128 3.245 5.155 4.546.72.304 1.282.486 1.722.622.723.223 1.382.191 1.903.116.583-.085 1.785-.73 2.036-1.436.251-.706.251-1.311.176-1.437-.075-.126-.277-.202-.578-.353z"/></svg>
+                        Send via WhatsApp
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
