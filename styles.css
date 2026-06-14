@@ -18,9 +18,27 @@
     background-color: #1A202C;
 }
 
+/* FIX FOR MOBILE IMAGE COMPRESSION AND SQUISHING */
+@media (max-width: 768px) {
+    .hero-bg {
+        min-height: 85vh !important;
+        height: auto;
+    }
+    .navbar-initial #navbar-logo,
+    .navbar-scrolled #navbar-logo {
+        height: 50px !important;
+        max-height: 50px !important;
+        min-height: 50px !important;
+        width: auto !important;
+    }
+}
+
 /* Dynamic Carousel Image Transition Engine Class */
 #hero-carousel-container {
     transition: background-image 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 /* ==========================================================================

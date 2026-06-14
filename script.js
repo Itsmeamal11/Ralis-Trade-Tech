@@ -65,21 +65,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const carouselContainer = document.getElementById("hero-carousel-container");
     const images = [
         "pics/hero1.png",
-        "pics/heromain.png",
-
+        "pics/heromain.png"
     ];
+    
     let currentIndex = 0;
+    
     function changeBackgroundImage() {
         if (carouselContainer) {
             carouselContainer.style.backgroundImage = `url('${images[currentIndex]}')`;
             currentIndex = (currentIndex + 1) % images.length;
         }
     }
-    if (carouselContainer) {
+    
+    if (carouselContainer && images.length > 0) {
         changeBackgroundImage();
         setInterval(changeBackgroundImage, 5000);
     }
-
 
     // 5. SMOOTH SCROLL
     document.querySelectorAll('a[href^="#"]').forEach(link => {
