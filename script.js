@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const images = [
         "pics/hero1.png",
         "pics/heromain.png",
-        "pics/hero222.jpg"
+
     ];
     let currentIndex = 0;
     function changeBackgroundImage() {
