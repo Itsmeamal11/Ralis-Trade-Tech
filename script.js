@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "pics/hero1.png",
         "pics/heromain.png",
         "pics/SandMain.jpeg",
-        "pics/SanddMain.jpeg",
+        "pics/Sanddmain.jpeg",
     ];
     
     let currentIndex = 0;
