@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ralis Trade Tech W.L.L</title>
+    <link class="neutral" rel="icon" type="image/png" href="pics/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-800 font-sans scroll-smooth pt-32">
+
+    <header id="main-navbar" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl px-6 mx-auto flex justify-between items-center h-20 md:h-24 transition-all duration-300 ease-in-out" id="navbar-container">
+            
+            <div class="flex items-center flex-shrink-0 z-50 py-2" id="logo-wrapper">
+                <a href="#home" class="block flex items-center h-full">
+                    <img src="pics/logo.png" alt="Ralis Trade Tech Logo" id="navbar-logo" 
+                         class="w-auto h-12 md:h-14 object-contain transition-all duration-300 ease-in-out block">
+                </a>
+            </div>
+
+            <!-- Balanced Desktop Navigation -->
+            <nav class="hidden md:flex items-center ml-auto mr-10 lg:mr-14 space-x-10 lg:space-x-12 font-bold text-sm lg:text-base tracking-wide" id="nav-links">
+                <a href="index.html" class="transition duration-300 py-2 text-slate-800 hover:text-brandRed">Home</a>
+                <a href="about.html" class="transition duration-300 py-2 text-slate-800 hover:text-brandRed">About Us</a>
+                <a href="products.html" class="transition duration-300 py-2 text-slate-800 hover:text-brandRed">Products</a>
+                <a href="contact.html" class="transition duration-300 py-2 text-slate-800 hover:text-brandRed">Contact Us</a>
+            </nav>
+            
+            <div class="hidden md:flex items-center flex-shrink-0">
+                <button id="nav-quote-button" onclick="openQuoteModal()" class="whitespace-nowrap bg-[#C53030] hover:bg-[#9B2C2C] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-sm transition-all duration-250 hover:-translate-y-0.5 ease-in-out">
+                    Get Quote
+                </button>
+            </div>
+
+            <div class="flex md:hidden items-center z-50">
+                <button id="mobile-menu-toggle" class="focus:outline-none p-2 rounded-lg transition-colors duration-300 text-slate-800">
+                    <svg class="w-7 h-7" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-dropdown" class="hidden md:hidden absolute left-4 right-4 bg-white border border-slate-200 flex flex-col px-6 py-6 space-y-3 font-bold text-base transition-all duration-300 ease-in-out rounded-2xl shadow-2xl z-50 mt-2">
+            <a href="index.html" class="text-slate-800 hover:text-brandRed transition py-2.5 border-b border-slate-50 tracking-wide">Home</a>
+            <a href="about.html" class="text-slate-800 hover:text-brandRed transition py-2.5 border-b border-slate-50 tracking-wide">About Us</a>
+            <a href="products.html" class="text-slate-800 hover:text-brandRed transition py-2.5 border-b border-slate-50 tracking-wide">Products</a>
+            <a href="contact.html" class="text-slate-800 hover:text-brandRed transition py-2.5 border-b border-slate-50 tracking-wide">Contact Us</a>
+            <button id="mobile-quote-trigger" onclick="openQuoteModal()" class="w-full bg-[#C53030] text-white text-center py-3 rounded-xl font-black shadow-lg hover:bg-[#9B2C2C] transition duration-300 block mt-2 tracking-wide text-sm">Get Quote</button>
+        </div>
+    </header>
+
+
+    <!-- Top Title Header Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-6 pb-2">
+        <div class="text-center opacity-0 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]">
+            <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">About Us</span>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4">About Us</h2>
+            <div class="w-20 h-1 bg-brandRed mx-auto mt-4"></div>
+        </div>
+    </section>
+
+    <!-- Section 1: Main About & Company Identity -->
+    <section id="about" class="pt-4 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 reveal-left">
+                <h3 class="text-3xl md:text-4xl font-black text-brandDark">
+                    Building Dreams with <span class="text-brandRed">Quality Materials</span>
+                </h3>
+                <p class="text-slate-600 leading-relaxed text-lg text-justify">
+Welcome to RALIS TRADE TECH WLL, your go-to destination for quality construction materials in Bahrain! We pride ourselves on being your trusted partner for all construction needs, specializing in Unwashed Dredged Sand and a comprehensive range of materials that meet the highest industry standards.
+
+We also facilitate imports for various requirements, including: PET Strap, Engineering Components, and Machineries. A one-stop solution for all your needs, encouraging orders of all volumes. Expect a seamless experience where quality, affordability, and exceptional service converge.
+
+Choose RALIS TRADE TECH W.L.L for all your construction needs and Enjoy a coherent experience characterized by quality, competitive pricing, and exceptional service.                
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 reveal-right">
+                <img src="pics/pet1.png" alt="Construction worker" class="rounded-2xl shadow-md h-48 w-full object-cover mt-6">
+                <img src="pics/Sand 2.jpg" alt="Bricks pile" class="rounded-2xl shadow-md h-48 w-full object-cover">
+                <img src="pics/Sand 3.jpg" alt="Sand texture" class="rounded-2xl shadow-md h-48 w-full object-cover">
+                <img src="pics/Ready-Mix Concrete 2.png" alt="Concrete blocks" class="rounded-2xl shadow-md h-48 w-full object-cover -mt-6">
+            </div>
+        </div>
+
+        <!-- Mission, Vision & Goal Cards -->
+        <div class="grid md:grid-cols-3 gap-6 mt-16">
+            <!-- Mission Card -->
+            <div class="border border-[#C53030] rounded-3xl p-8 text-center flex flex-col justify-start bg-white">
+                <h4 class="text-2xl font-black text-[#C53030] uppercase tracking-wider mb-6">Mission</h4>
+                <p class="text-slate-600 leading-relaxed text-[15px] text-justify md:text-center">
+                    MISSION to source and supply premium construction materials at competitive price, that meet the evolving needs of our esteemed customers, while maintaining a commitment to quality, integrity, and prioritizing customer satisfaction in every interaction to achieve their project goals with confidence, efficiency, and sustainability.
+                </p>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="border border-[#C53030] rounded-3xl p-8 text-center flex flex-col justify-start bg-white">
+                <h4 class="text-2xl font-black text-[#C53030] uppercase tracking-wider mb-6">Vision</h4>
+                <p class="text-slate-600 leading-relaxed text-[15px] text-justify md:text-center">
+                    VISION to be the most trusted and reliable supplier of construction materials, committed to excellence, sustainability, and customer success in every project we support.
+                </p>
+            </div>
+
+            <!-- Goal Card -->
+            <div class="border border-[#C53030] rounded-3xl p-8 text-center flex flex-col justify-start bg-white">
+                <h4 class="text-2xl font-black text-[#C53030] uppercase tracking-wider mb-6">Goal</h4>
+                <p class="text-slate-600 leading-relaxed text-[15px] text-justify md:text-center">
+                    We are committed to ethical business practices and fair dealings, ensuring compliance with local regulations in all our operations, fostering trust and transparency with our clients and partners.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Why We Stand Out (Distinct Bulletins Container Section) -->
+    <section id="bulletins" class="py-20 bg-slate-50/50 border-t border-slate-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">Core Strengths</span>
+                <h3 class="text-3xl md:text-4xl font-black text-slate-900 mt-4">Why We Stand Out</h3>
+                <div class="w-16 h-1 bg-brandRed mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Quality Materials -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 transition duration-300 hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span> Quality Materials
+                    </h4>
+                    <p class="text-slate-600 leading-relaxed text-[15px] text-justify">
+                        We prioritize excellence by supplying a comprehensive range of premium construction materials, ensuring all sand and engineering components adhere strictly to top industry benchmarks.
+                    </p>
+                </div>
+
+                <!-- Reliable Delivery -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 transition duration-300 hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span> Reliable Delivery
+                    </h4>
+                    <p class="text-slate-600 leading-relaxed text-[15px] text-justify">
+                        Project timelines are critical. We operate with a seamless logistical framework designed to ensure your structural materials arrive safely and precisely when you need them.
+                    </p>
+                </div>
+
+                <!-- Competitive Pricing -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 transition duration-300 hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span> Competitive Pricing
+                    </h4>
+                    <p class="text-slate-600 leading-relaxed text-[15px] text-justify">
+                        We balance structural reliability with cost efficiency. By optimizing supply links, we encourage orders of all volumes while presenting highly accessible economic options.
+                    </p>
+                </div>
+
+                <!-- Exceptional Service -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 transition duration-300 hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span> Exceptional Service
+                    </h4>
+                    <p class="text-slate-600 leading-relaxed text-[15px] text-justify">
+                        Our engagement extends beyond procurement. Our specialized team handles everything from custom imports to local support, offering a single coherent journey from start to finish.
+                    </p>
+                </div>
+
+                <!-- Our Business Values -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 transition duration-300 hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span> Our Business Values
+                    </h4>
+                    <p class="text-slate-600 leading-relaxed text-[15px] text-justify">
+                        Our success is built on trust. We are committed to ethical business practices, transparent communication, and fair dealings with our customers, suppliers, employees, and business partners. By treating every stakeholder with respect and integrity, we create lasting relationships that support sustainable growth.
+                    </p>
+                </div>
+
+                <!-- Ethical Business Practices -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 transition duration-300 hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span> Ethical Business Practices
+                    </h4>
+                    <p class="text-slate-600 leading-relaxed text-[15px] text-justify">
+                        We are committed to conducting our business with integrity, transparency, and accountability. We comply with all applicable laws and regulations and work closely with our suppliers and business partners to uphold the same high standards of ethical and responsible business conduct.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-100 text-slate-600 py-16 px-6 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 border-b border-slate-200 pb-12 mb-12">
+            <div>
+                <div class="flex items-center mb-6">
+                    <img src="pics/logo.png" alt="Ralis Trade Tech Logo" class="h-16 w-auto object-contain opacity-100">
+                </div>
+                <p class="text-sm leading-relaxed text-slate-500">
+Your Trusted Partner for Construction Supplies.             </div>
+            <div>
+                <h5 class="text-slate-900 font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="index.html" class="hover:text-brandRed transition text-slate-600">Home</a></li>
+                    <li><a href="about.html" class="hover:text-brandRed transition text-slate-600">About Us</a></li>
+                    <li><a href="index.html#services" class="hover:text-brandRed transition text-slate-600">Our Services</a></li>
+                    <li><a href="products.html" class="hover:text-brandRed transition text-slate-600">Products</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-slate-900 font-bold text-lg mb-6">Contact Channels</h5>
+                <p class="text-sm text-slate-500 mb-2 font-medium">Kingdom of Bahrain</p>
+                <p class="text-sm font-semibold text-slate-800">Email: <span class="text-brandRed hover:underline cursor-pointer">ralistradetech@gmail.com </span></p>
+                <p class="text-sm font-semibold text-slate-800">Email: <span class="text-brandRed hover:underline cursor-pointer">suresh@ralistradetech.com</span></p>
+
+                <p class="text-sm font-semibold text-slate-800">Phone: <span class="text-brandRed hover:underline cursor-pointer">+973 351 636 36</span></p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center text-xs text-slate-400 font-medium">
+            &copy; 2026 Ralis Trade Tech W.L.L. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

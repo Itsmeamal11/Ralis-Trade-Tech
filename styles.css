@@ -1,0 +1,197 @@
+/* Custom Global Configurations */
+:root {
+    --brand-red: #EB1D25;
+    --brand-dark: #1A202C;
+}
+
+/* Base Extended Tailwind Classes */
+.bg-brandRed { background-color: var(--brand-red); }
+.text-brandRed { color: var(--brand-red); }
+.border-brandRed { border-color: var(--brand-red); }
+.bg-brandDark { background-color: var(--brand-dark); }
+.text-brandDark { color: var(--brand-dark); }
+
+/* Hero Dynamic Background */
+.hero-bg {
+    width: 100%;
+    position: relative;
+    background-color: #1A202C;
+}
+
+/* FIX FOR MOBILE IMAGE COMPRESSION AND SQUISHING */
+@media (max-width: 768px) {
+    .hero-bg {
+        min-height: 85vh !important;
+        height: auto;
+    }
+    .navbar-initial #navbar-logo,
+    .navbar-scrolled #navbar-logo {
+        height: 50px !important;
+        max-height: 50px !important;
+        min-height: 50px !important;
+        width: auto !important;
+    }
+}
+
+/* Dynamic Carousel Image Transition Engine Class */
+#hero-carousel-container {
+    transition: background-image 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ==========================================================================
+   DYNAMIC BLENDED NAVBAR ARCHITECTURE
+   ========================================================================== */
+
+/* State 1: Top of Page (Transparent Base, White High-Contrast Typography) */
+.navbar-initial {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+.navbar-initial #navbar-container {
+    height: 6.5rem !important;
+}
+.navbar-initial #nav-links a {
+    color: rgba(0, 0, 0, 0.9);
+}
+.navbar-initial #nav-links a:hover {
+    color: #ff0000;
+}
+
+/* State 2: Scrolled Down (Glassmorphism Frosted Base, Slate Typography) */
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px -4px rgba(26, 32, 44, 0.1);
+}
+.navbar-scrolled #navbar-container {
+    height: 4rem !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.navbar-scrolled #nav-links a {
+    color: #2D3748;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    font-size: 0.95rem !important;
+}
+.navbar-scrolled #nav-links a:hover {
+    color: var(--brand-red);
+}
+
+/* Dynamic Navbar Logo Image Scaling Metrics */
+.navbar-initial #navbar-logo {
+    height: 90px !important;
+    max-height: 90px !important;
+    min-height: 90px !important;
+}
+.navbar-scrolled #navbar-logo {
+    height: 55px !important;
+    max-height: 55px !important;
+    min-height: 55px !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.04));
+}
+
+
+/* ==========================================================================
+   SCROLL INTERSECTION ANIMATION ARCHITECTURE 
+   ========================================================================== */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.reveal-active {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+}
+
+.product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+/* ==========================================================================
+   AESTHETIC FLOATING MOBILE NAVIGATION EXTENSIONS
+   ========================================================================== */
+#mobile-dropdown.show-menu {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    z-index: 99999 !important;
+}
+
+/* ==========================================================================
+   AIRTIGHT PROTECTION SHIELD FOR NAVBAR ACTION BUTTONS
+   ========================================================================== */
+header #navbar-container div #nav-quote-button {
+    background-color: #C53030 !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 0.875rem !important;
+    padding: 0.625rem 1.5rem !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-block !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+header #navbar-container div #nav-quote-button:hover {
+    background-color: #9B2C2C !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 10px 15px -3px rgba(197, 48, 48, 0.3) !important;
+    transform: translateY(-1.5px) !important;
+}
+
+/* ==========================================================================
+   CSS ENTRANCE KEYFRAME ANIMATIONS FOR STANDALONE PAGES
+   ========================================================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Force explicit registration for arbitrary inline compilation scripts */
+.animate-\[fadeInUp_0\.6s_ease-out_0\.1s_forwards\],
+.animate-\[fadeInUp_0\.6s_ease-out_0\.2s_forwards\],
+.animate-\[fadeInUp_0\.6s_ease-out_0\.25s_forwards\],
+.animate-\[fadeInUp_0\.6s_ease-out_0\.3s_forwards\] {
+    animation-name: fadeInUp !important;
+    animation-fill-mode: forwards !important;
+}
+
+/* ==========================================================================
+   MODAL INTERACTION TRIGGER STATE LAYER
+   ========================================================================== */
+#quote-modal.modal-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+#quote-modal.modal-active > div {
+    transform: scale(1) !important;
+}
