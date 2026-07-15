@@ -214,7 +214,7 @@ window.sendToWhatsApp = () => {
     const encodedMessage = encodeURIComponent(message);
     
     // Your WhatsApp Number from the Contact Page (Bahrain country code +973)
-    const whatsappNumber = "97333457950"; 
+    const whatsappNumber = "918594051637"; 
     
     // Open WhatsApp
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
