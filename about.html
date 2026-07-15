@@ -56,7 +56,7 @@
     <!-- Top Title Header Section -->
     <section class="max-w-7xl mx-auto px-6 pt-6 pb-2">
         <div class="text-center opacity-0 animate-[fadeInUp_0.6s_ease-out_0.1s_forwards]">
-            <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">About Us</span>
+            <!-- <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">About Us</span> -->
             <h2 class="text-4xl md:text-5xl font-black text-slate-900 mt-4">About Us</h2>
             <div class="w-20 h-1 bg-brandRed mx-auto mt-4"></div>
         </div>
@@ -70,11 +70,18 @@
                     Welcome to <span class="text-brandRed">RALIS TRADE TECH W.L.L,</span>
                 </h3>
                 <p class="text-slate-600 leading-relaxed text-lg text-justify">
- Your go-to destination for quality construction materials in Bahrain! We pride ourselves on being your trusted partner for all construction needs, specializing in Unwashed Dredged Sand and a comprehensive range of materials that meet the highest industry standards.
+                    Your destination for quality construction materials in Bahrain! We take pride on being your trusted partner for all construction needs, specializing in the supply of Unwashed and Washed Marine Dredged sand and a comprehensive range of materials that meet the highest industry standards.
 
-We also facilitate imports for various requirements, including: PET Strap, Engineering Components, and Machineries. A one-stop solution for all your needs, encouraging orders of all volumes. Expect a seamless experience where quality, affordability, and exceptional service converge.
+                                    <p class="text-slate-600 leading-relaxed text-lg text-justify">
+                                        We also facilitate imports for various requirements, including - PET Strap, Engineering Components, and Machineries. A one-stop solution for all your needs, encouraging orders of all volumes.
+                                 <p class="text-slate-600 leading-relaxed text-lg text-justify">
+                                    Choose RALIS TRADE TECH WLL for all your construction needs and enjoy a coherent experience characterized by quality, competitive pricing, and exceptional service.
 
-Choose RALIS TRADE TECH W.L.L for all your construction needs and Enjoy a coherent experience characterized by quality, competitive pricing, and exceptional service.                
+
+
+
+
+
             </div>
             
             <div class="grid grid-cols-2 gap-4 reveal-right">
@@ -218,6 +225,66 @@ Your Trusted Partner for Construction Supplies.             </div>
             &copy; 2026 Ralis Trade Tech W.L.L. All Rights Reserved.
         </div>
     </footer>
+
+    <!-- Quote Modal Container Wrapper (Bridges layout logic to local click listeners) -->
+    <div id="quote-modal" class="fixed inset-0 bg-black/60 z-[99999] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white w-full max-w-lg rounded-2xl p-8 relative shadow-2xl transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition p-2 rounded-lg focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <form action="https://formspree.io/f/xgobpjee" method="POST" class="space-y-5" id="quote-form">
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="wa-name" name="Full Name" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brandRed transition">
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Email <span class="text-red-500">*</span></label>
+                    <input type="email" id="wa-email" name="Email Address" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brandRed transition">
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Contact Numbers <span class="text-red-500">*</span></label>
+                    <input type="tel" id="wa-phone" name="Phone Number" required class="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brandRed transition">
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-2">Contact me in</label>
+                    <div class="flex items-center space-x-6 text-sm font-medium text-slate-700">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="Preferred Contact Method" value="phone" class="w-4 h-4 text-brandRed focus:ring-brandRed border-slate-300">
+                            <span>Phone</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="Preferred Contact Method" value="email" class="w-4 h-4 text-brandRed focus:ring-brandRed border-slate-300">
+                            <span>Email</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-slate-800 font-bold text-sm mb-1.5">Product Looking for?</label>
+                    <select id="wa-product" name="Product Interested In" class="w-full border border-slate-200 bg-white rounded-xl px-4 py-3 text-slate-700 focus:outline-none focus:border-brandRed transition cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_16px_center] bg-no-repeat">
+                        <option value="Blocks">Blocks</option>
+                        <option value="Crushed Products">Crushed Products</option>
+                        <option value="HP KERBS & EDGE KERBS">HP KERBS & EDGE KERBS</option>
+                        <option value="Ready-Mix Concrete">Ready-Mix Concrete</option>
+                        <option value="Washed Sand">Washed Sand</option>
+                        <option value="Unwashed Sand">Unwashed Sand</option>
+                        <option value="Pavers">Pavers</option>
+
+                    </select>
+                </div>
+                
+                <div class="pt-4 flex flex-col gap-3">
+                    <button type="submit" class="w-full bg-[#EA3829] hover:bg-[#D62E20] text-white font-bold py-3.5 px-6 rounded-full transition-all duration-300 shadow-md">
+                        Submit via Email
+                    </button>
+                    
+                    <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3.5 px-6 rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.124.551 4.195 1.599 6.01L.044 23.953l6.059-1.585c1.768.966 3.754 1.474 5.828 1.474 6.645 0 12.03-5.385 12.03-12.03C23.961 5.385 18.676 0 12.031 0zm.017 21.905c-1.802 0-3.57-.485-5.116-1.401l-.367-.217-3.805.996 1.018-3.71-.238-.379c-.997-1.589-1.523-3.435-1.523-5.352 0-5.513 4.487-10 10.003-10 5.515 0 10 4.487 10 10s-4.485 10-10 10zm5.485-7.485c-.301-.151-1.785-.882-2.062-.983-.277-.101-.479-.151-.68.151-.201.302-.781.983-.957 1.185-.176.202-.352.227-.653.076-1.396-.704-2.529-1.599-3.486-3.219-.206-.35-.022-.54.129-.69.135-.135.302-.353.453-.529.151-.176.201-.302.302-.503.101-.202.05-.378-.025-.529-.076-.151-.68-1.639-.932-2.245-.246-.591-.496-.511-.68-.521l-.579-.01c-.201 0-.528.076-.804.378-.277.302-1.056 1.033-1.056 2.518 0 1.485 1.082 2.92 1.232 3.122.151.201 2.128 3.245 5.155 4.546.72.304 1.282.486 1.722.622.723.223 1.382.191 1.903.116.583-.085 1.785-.73 2.036-1.436.251-.706.251-1.311.176-1.437-.075-.126-.277-.202-.578-.353z"/></svg>
+                        Send via WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

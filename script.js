@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "pics/hero1.png",
         "pics/heromain.png",
         "pics/SandMain.jpeg",
-        "pics/Sanddmain.jpeg",
     ];
     
     let currentIndex = 0;
@@ -214,7 +213,7 @@ window.sendToWhatsApp = () => {
     const encodedMessage = encodeURIComponent(message);
     
     // Your WhatsApp Number from the Contact Page (Bahrain country code +973)
-    const whatsappNumber = "918594051637"; 
+    const whatsappNumber = "97335163636"; 
     
     // Open WhatsApp
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');

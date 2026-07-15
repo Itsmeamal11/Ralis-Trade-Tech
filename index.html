@@ -97,66 +97,51 @@
         </style>
     </section>
 
-    <section id="about" class="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 reveal-left">
-                <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">
-                    About Us
-                </span>
-                <h3 class="text-3xl md:text-4xl font-black text-brandDark">
-                    Welcome to  <span class="text-brandRed">RALIS TRADE TECH W.L.L,</span>
-                </h3>
-                <p class="text-slate-600 leading-relaxed text-lg">
- Your destination for quality construction materials in Bahrain! We take pride on being your trusted partner for all construction needs, specializing in the supply of Unwashed and Washed Marine Dredged sand and a comprehensive range of materials that meet the highest industry standards. Expect a seamless experience where quality, affordability, and exceptional service converge.                
-                
-                <div class="pt-2">
-                    <a href="about.html" class="inline-block bg-[#C53030] hover:bg-[#9B2C2C] text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-250 hover:-translate-y-0.5 ease-in-out shadow-sm">
-                        View More
-                    </a>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4 reveal-right">
-                <img src="pics/pet1.png" alt="Construction worker" class="rounded-2xl shadow-md h-48 w-full object-cover mt-6">
-                <img src="pics/Sand 2.jpg" alt="Bricks pile" class="rounded-2xl shadow-md h-48 w-full object-cover">
-                <img src="pics/Sand 3.jpg" alt="Sand texture" class="rounded-2xl shadow-md h-48 w-full object-cover">
-                <img src="pics/Ready-Mix Concrete 2.png" alt="Concrete blocks" class="rounded-2xl shadow-md h-48 w-full object-cover -mt-6">
-            </div>
+    <!-- Section: Material Showcase Infinite Scroll Marquee -->
+    <section class="py-14 bg-white overflow-hidden border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 mb-2 text-center md:text-left">
+            <!-- <span class="text-xs uppercase font-bold text-brandRed tracking-widest bg-red-50 px-2.5 py-1 rounded-md">Material Showcase</span> -->
         </div>
-    </section>
-    
-    <section class="bg-white border-y border-slate-100 py-12 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition reveal-up">
-                <div class="bg-brandRed/10 text-brandRed p-3 rounded-xl">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138z"/></svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg text-brandDark">Quality Assured</h4>
-                    <p class="text-slate-500 text-sm mt-1">Materials from trusted manufacturers.</p>
-                </div>
-            </div>
-            <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition reveal-up" style="transition-delay: 150ms;">
-                <div class="bg-brandRed/10 text-brandRed p-3 rounded-xl">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg text-brandDark">Fast Delivery</h4>
-                    <p class="text-slate-500 text-sm mt-1">Timely delivery to meet your project timelines.</p>
-                </div>
-            </div>
-            <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-slate-50 transition reveal-up" style="transition-delay: 300ms;">
-                <div class="bg-brandRed/10 text-brandRed p-3 rounded-xl">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg text-brandDark">Expert Team</h4>
-                    <p class="text-slate-500 text-sm mt-1">Dedicated professionals at your continuous service.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        
+        <!-- Infinite Scroll Outer Container -->
+        <div class="relative flex w-full overflow-x-hidden group">
+            <!-- Left & Right Vignette Overlays for smooth premium blend -->
+            <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
+            <!-- Track 1: First continuous loop -->
+            <div class="flex space-x-6 shrink-0 animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused]">
+                <img src="pics/Sand 1.png" alt="Washed Sand" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/Sand 2.jpg" alt="Unwashed Sand" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/block 1.png" alt="Hollow Blocks" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/Kerbs 1 .png" alt="Road Kerbs" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/crushed products 1 .png" alt="Crushed Aggregates" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/Ready-Mix Concrete 1.jpg" alt="Ready Mix Concrete" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <!-- Fixed: Changed object-cover to object-contain so the full generator frame is preserved -->
+                <img src="pics/mmahindra.jpg" alt="Mahindra" class="w-80 h-48 object-contain rounded-xl shadow-sm border border-slate-100">
+            </div>
+
+            <!-- Track 2: Duplicate exact clone to loop behind it seamlessly without visual jumps -->
+            <div class="flex space-x-6 shrink-0 aria-hidden='true' animate-[marquee_25s_linear_infinite] group-hover:[animation-play-state:paused]">
+                <img src="pics/Sand 1.png" alt="Washed Sand" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/Sand 2.jpg" alt="Unwashed Sand" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/block 1.png" alt="Hollow Blocks" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/Kerbs 1 .png" alt="Road Kerbs" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/crushed products 1 .png" alt="Crushed Aggregates" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <img src="pics/Ready-Mix Concrete 1.jpg" alt="Ready Mix Concrete" class="w-80 h-48 object-cover rounded-xl shadow-sm border border-slate-100">
+                <!-- Fixed: Changed object-cover to object-contain so the full generator frame is preserved -->
+                <img src="pics/mmahindra.jpg" alt="Mahindra" class="w-80 h-48 object-contain rounded-xl shadow-sm border border-slate-100">
+            </div>
+        </div>
+
+        <!-- Scoped CSS Keyframes for Infinite Smooth Sliding -->
+        <style>
+            @keyframes marquee {
+                0% { transform: translateX(0%); }
+                100% { transform: translateX(calc(-100% - 1.5rem)); }
+            }
+        </style>
+    </section>
     <section id="services" class="py-20 bg-slate-50/60 px-6">
         <div class="max-w-7xl mx-auto text-center mb-16 reveal-up">
             <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">
@@ -246,8 +231,8 @@
     <section id="why-choose-us" class="py-20 bg-slate-50/50 border-t border-slate-100 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">Core Strengths</span>
-                <h3 class="text-3xl md:text-4xl font-black text-slate-900 mt-4">Why We Stand Out</h3>
+                <!-- <span class="bg-red-100 text-brandRed font-bold text-xs uppercase px-3 py-1.5 rounded-full tracking-wider">Core Strengths</span> -->
+                <h3 class="text-3xl md:text-4xl font-black text-slate-900 mt-4">Our Core Strengths</h3>
                 <div class="w-16 h-1 bg-brandRed mx-auto mt-4"></div>
             </div>
 
